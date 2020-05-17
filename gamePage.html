@@ -8,12 +8,82 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-      
+
       <script>
 
+        function computerPlay()
+        {
+            let option = Math.floor((Math.random() * 3) + 1);
 
+            switch(option)
+            {
+                case 1:
+                    return "rock";
+                case 2:
+                    return "paper";
+                default:
+                    return "scissors";
+            }
+        }
 
+        function humanPlay()
+        {
+            return window.prompt("Rock/Paper/Scissors").toLowerCase();
+        }
+        
+        function playRound(computer, human)
+        {
+            if(computer == "rock")
+            {
+                if(human == "rock")
+                    return "DRAW! You picked the same as the computer!";
+                else
+                {
+                    if(human == "paper")
+                        return "YOU WIN! Paper beats rock!";
+                    else
+                        return "YOU LOSE! Rock beats scissors!";
+                }
+            }
+            else
+            {
+                if(computer == "paper")
+                {
+                    if(human == "paper")
+                        return "DRAW! You picked the same as the computer!";
+                    else
+                    {
+                        if(human == "rock")
+                            return "YOU LOSE! Paper beats rock!";
+                        else
+                            return "YOU WIN! Scissors beats paper!";
+                    }
+                }
+                else
+                {
+                    if(human == "scissors")
+                        return "DRAW! You picked the same as the computer!";
+                    else
+                    {
+                        if(human == "rock")
+                            return "YOU WIN! Rock beats scissors!";
+                        else
+                            return "YOU LOSE! Scissors beats paper!";
+                    }
+                }
+            }
+        }
 
+        function startGame()
+        {
+            console.log(playRound(computerPlay(), humanPlay()));
+            console.log(playRound(computerPlay(), humanPlay()));
+            console.log(playRound(computerPlay(), humanPlay()));
+            console.log(playRound(computerPlay(), humanPlay()));
+            console.log(playRound(computerPlay(), humanPlay()));
+        }
+
+        startGame();
 
       </script>
 
