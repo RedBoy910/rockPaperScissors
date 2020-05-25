@@ -1,0 +1,45 @@
+.container
+{
+    width: 100vw;
+    margin-top: 100px;
+}
+
+#mainHeader
+{
+    margin-bottom: 50px;
+}
+
+.scoreboard
+{
+    margin-top: 150px;
+}
+
+#scoreDisplay
+{
+    background-color: lightgrey;
+    border-bottom: 4px solid black;
+}
+
+#playerScore
+{
+    color: blue;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#computerScore
+{
+    color: red;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.btn
+{
+    width: 250px;
+}
+
+.result
+{
+    font-size: 20px;
+}
